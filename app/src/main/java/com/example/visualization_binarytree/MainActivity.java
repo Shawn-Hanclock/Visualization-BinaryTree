@@ -1,12 +1,15 @@
 package com.example.visualization_binarytree;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +22,51 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        //about fragment button
+        Button btnAbout = findViewById(R.id.btnAbout);
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //used to switch between fragments
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, AboutFragment.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack("about")//not sure what this is for
+                        .commit();
+            }
+        });
+
+        //data fragment button
+        Button btnData = findViewById(R.id.btnData);
+        btnData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //used to switch between fragments
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, DataFragment.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack("data")//not sure what this is for
+                        .commit();
+            }
+        });
+
+        //tree fragment button
+        Button btnTree = findViewById(R.id.btnTree);
+        btnTree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //used to switch between fragments
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, TreeFragment.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack("tree")//not sure what this is for
+                        .commit();
+            }
         });
     }
 }
