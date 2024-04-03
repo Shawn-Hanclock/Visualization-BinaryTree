@@ -5,16 +5,34 @@
     android:layout_height="match_parent"
     tools:context=".DataFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#B1ADA7"
-    android:fontFamily="sans-serif-condensed"
-    android:text="Data Fragment"
-    android:paddingTop="20dp"
-    android:textAlignment="center"
-    android:textSize="24sp"
-    android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B1ADA7"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="20dp"
+            android:text="add or remove"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
 
 </FrameLayout>
