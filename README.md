@@ -7,3 +7,4 @@
 > - Declared 15pts
 > - Populated	15pts
 > 3. <p><b>DEMONSTRATION</b> -> 15pts</p>		
+Total: 90 pts
