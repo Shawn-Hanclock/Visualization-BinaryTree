@@ -1,10 +1,10 @@
 ### Assignment Requirements/Rubric
-> 1. <p><b>SCROLL VIEW</b> -> 40pts</p>
->	- Implemented 20pts
->	- Shows Overflow	20pts	
-> 2. <p><b>DATA STRUCTURE</b> -> 45pts</p>
-> - Included 15pts
-> - Declared 15pts
-> - Populated	15pts
-> 3. <p><b>DEMONSTRATION</b> -> 15pts</p>		
-Total: 90 pts
+> 1. <p><b>SCROLL VIEW</b> -> 40 pts</p>
+>	- Implemented 20 pts
+>	- Shows Overflow	20 pts	
+> 2. <p><b>DATA STRUCTURE</b> -> 45 pts</p>
+> - Included 15 pts
+> - Declared 15 pts
+> - Populated	15 pts
+> 3. <p><b>DEMONSTRATION</b> -> 15 pts</p>		
+> Total: 90 pts
