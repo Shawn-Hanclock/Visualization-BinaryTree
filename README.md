@@ -6,5 +6,4 @@
 > - Included 15 pts
 > - Declared 15 pts
 > - Populated	15 pts
-> 3. <p><b>DEMONSTRATION</b> -> 15 pts</p>		
-> Total: 90 pts
+> 3. <p><b>DEMONSTRATION</b> -> 15 pts</p>
