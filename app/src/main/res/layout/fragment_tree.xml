@@ -17,6 +17,7 @@
             android:orientation="vertical" >
 
             <TextView
+                android:id="@+id/nodeViewTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#B1ADA7"
@@ -28,11 +29,50 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/upBtn"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button"
-                android:text="Button" />
+                android:layout_marginTop="35dp"
+                android:text="Up" />
+
+            <TextView
+                android:id="@+id/nodeDataTv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_margin="35dp"
+                android:gravity="center"
+                android:textSize="40sp"
+                android:text="0"
+
+                android:background="@drawable/circular_background"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/leftBtn"
+                    android:layout_marginLeft="45dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Down Left" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/rightBtn"
+                    android:layout_marginRight="45dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Down Right" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
