@@ -55,15 +55,15 @@ public class Node
     {
         return parent;
     }
-// [LEFT UNREMOVED JUST IN CASE]
-//    public void setLeft(int data)
-//    {
-//        left.setData(data);
-//    }
-//    public void setRight(int data) {
-//        right.setData(data);
-//    }
+    public void setLeft(Node left)
+    {
+        this.left = left;
+    }
+    public void setRight(Node right) {
+        this.right = right;
+    }
 
+// [LEFT UNREMOVED JUST IN CASE]
 //    public void setParent(int data)
 //    {
 //        parent.setData(data);
@@ -87,7 +87,7 @@ public class Node
 //        if(parent == null) return 0;
 //        return 1 + parent.findHeight();
 //    }
-    private Node findNext() //finds the left most node, will keep it as a complete binary tree
+    public Node findNext() //finds the left most node, will keep it as a complete binary tree
     {
         if(right != null && left != null)
         {

@@ -50,11 +50,33 @@ public class DataFragment extends Fragment {
                     appTree.addData(data);
                 }
                 catch (NumberFormatException e) {
-                    Toast.makeText(getActivity(), "Tree only accepts integers.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Tree only accepts integers.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
+        remove.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                try {
+                    Node last = appTree.getRoot().findNext();
+                    if(last.getParent() == null) {
+                        appTree.setRoot(null);
+                    }
+                    else {
+                        if (last.getRight() == null) {
+                            last.setLeft(null);
+                        }
+                        else {
+                            last.setRight(null);
+                            // this does not always remove a node
+                        }
+                    }
+                }
+                catch (NullPointerException e) {
+                    Toast.makeText(getActivity(), "Nothing to remove.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         return rootView;
     }
 }

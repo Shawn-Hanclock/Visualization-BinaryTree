@@ -3,7 +3,7 @@ package com.example.visualization_binarytree;//import java.util.ArrayList;
 public class BinaryTree
 {
     // variables
-    private final Node root;
+    private Node root;
 
     // constructor
     public BinaryTree(int data)
@@ -21,15 +21,14 @@ public class BinaryTree
     {
         root = new Node();
     }
-
     // getter and setter
     public Node getRoot()
     {
         return root;
     }
-    public void setRoot(int data)
+    public void setRoot(Node data)
     {
-        root.setData(data);
+        root = data;
     }
 
     // brain methods
