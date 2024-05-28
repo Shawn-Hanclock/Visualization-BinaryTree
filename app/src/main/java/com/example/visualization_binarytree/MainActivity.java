@@ -14,6 +14,8 @@ import androidx.fragment.app.FragmentManager;
 public class MainActivity extends AppCompatActivity {
     public Node currentNode;
 
+    public static BinaryTree appTree = new BinaryTree();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-
         //about fragment button
         Button btnAbout = findViewById(R.id.btnAbout);
         btnAbout.setOnClickListener(new View.OnClickListener() {
@@ -68,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
                         .commit();
             }
         });
-
-        BinaryTree appTree = new BinaryTree();
         currentNode = appTree.getRoot();
     }
 }

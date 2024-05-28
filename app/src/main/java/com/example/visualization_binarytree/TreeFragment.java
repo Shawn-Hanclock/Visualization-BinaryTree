@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -57,12 +58,32 @@ public class TreeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // context
         View rootView = inflater.inflate(R.layout.fragment_tree, container, false);
-//        String current
-        TextView currentNode = rootView.findViewById(R.id.nodeViewTv);
-        currentNode.setText("testing 1 2 3");
+        BinaryTree appTree = MainActivity.appTree;
+        Node currNode = appTree.getRoot();
+        // elements
+        Button left = rootView.findViewById(R.id.leftBtn);
+        Button right = rootView.findViewById(R.id.rightBtn);
+        Button up  = rootView.findViewById(R.id.upBtn);
+        left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
+        hideShowReset(currNode, rootView);
         return rootView;
+    }
+    public static void hideShowReset(Node node, View v)
+    {
+        TextView currentNode = v.findViewById(R.id.nodeViewTv);
+        TextView nodeData = v.findViewById(R.id.nodeDataTv);
+        currentNode.setText("Root");
+        nodeData.setText(node.getData().toString());
+//        if(node.isLeaf())
+//        {
+//
+//        }
     }
 }

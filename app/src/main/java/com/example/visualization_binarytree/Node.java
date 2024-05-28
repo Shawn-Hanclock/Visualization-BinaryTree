@@ -25,7 +25,7 @@ public class Node
     }
     public Node() //used to create empty root
     {
-        data = null;
+        data = 0;
         left = null;
         right = null;
         parent = null;
@@ -48,6 +48,9 @@ public class Node
     public Node getRight() {
         return right;
     }
+    public Node getLeft() {
+        return left;
+    }
     public Node getParent()
     {
         return parent;
@@ -59,9 +62,6 @@ public class Node
 //    }
 //    public void setRight(int data) {
 //        right.setData(data);
-//    }
-//    public com.example.com.example.BinaryTree.BinaryTree.Node getLeft() {
-//        return left;
 //    }
 
 //    public void setParent(int data)
@@ -95,12 +95,12 @@ public class Node
             Node sub2 = right.findNext();
             if(sub1.findHeight() > sub2.findHeight())
             {
-                if(sub1.parent.getRight() == null) return sub1;
+                if(sub1.parent.right == null) return sub1;
                 return sub2;
             }
             else if(sub1.findHeight() < sub2.findHeight())
             {
-                if(sub2.parent.getRight() == null) return sub2;
+                if(sub2.parent.right == null) return sub2;
                 return sub1;
             }
             else return sub1;
@@ -113,7 +113,7 @@ public class Node
         if(addLeaf.left != null) addLeaf.right = new Node(addData, addLeaf);
         else addLeaf.left = new Node(addData, addLeaf);
     }
-    private boolean isLeaf() //leafs will have two empty child references
+    public boolean isLeaf() //leafs will have two empty child references
     {
         return left == null && right == null;
     }
