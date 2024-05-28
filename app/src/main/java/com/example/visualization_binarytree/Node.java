@@ -25,7 +25,7 @@ public class Node
     }
     public Node() //used to create empty root
     {
-        data = 0;
+        data = null;
         left = null;
         right = null;
         parent = null;

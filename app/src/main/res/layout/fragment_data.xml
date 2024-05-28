@@ -29,7 +29,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/locationTv"
                 android:layout_width="wrap_content"
                 android:layout_weight=".2"
                 android:layout_height="wrap_content"
@@ -50,6 +50,7 @@
             android:paddingLeft="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dataInputTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Your Data" />
@@ -71,8 +72,17 @@
             app:cornerRadius="6dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:text="Remove" />
+            android:text="Remove Last" />
+
+        <TextView
+        android:id="@+id/hintTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:text="hint yet to be added"
+        android:textSize="24sp"
+        android:textStyle="bold" />
     </LinearLayout>
-
-
 </FrameLayout>

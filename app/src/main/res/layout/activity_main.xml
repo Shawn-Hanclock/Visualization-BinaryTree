@@ -73,11 +73,11 @@
             android:layout_weight="0.2" />
 
         <Button
-            android:id="@+id/btnData"
+            android:id="@+id/btnTree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Data"
+            android:text="Tree"
             app:cornerRadius="6dp" />
 
         <Space
@@ -86,12 +86,11 @@
             android:layout_weight="0.2" />
 
         <Button
-            android:id="@+id/btnTree"
+            android:id="@+id/btnData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Tree"
+            android:text="Data"
             app:cornerRadius="6dp" />
-
     </LinearLayout>
 </LinearLayout>

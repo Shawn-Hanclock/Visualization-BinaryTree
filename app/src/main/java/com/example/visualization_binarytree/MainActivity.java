@@ -71,4 +71,7 @@ public class MainActivity extends AppCompatActivity {
         });
         currentNode = appTree.getRoot();
     }
+    public Node getCurrentNode(){
+        return currentNode;
+    }
 }

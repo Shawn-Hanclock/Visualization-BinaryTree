@@ -19,7 +19,7 @@
             android:fontFamily="sans-serif-condensed"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
-            android:text="Edit your own Binary Tree\n\nUse the Data tab for data inputs \nand Tree tab to view."
+            android:text="Edit your own Binary Tree\n\nUse the Tree tab to view the tree \nand Data tab for data inputs."
             android:textSize="24sp"
             android:textStyle="bold" />
 
