@@ -25,6 +25,14 @@ public class TreeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    // instance variables
+    private static Button left;
+    private static Button right;
+    private static Button up;
+
+    private final BinaryTree appTree = MainActivity.appTree;
+    private  Node currNode = appTree.getRoot();
+
     public TreeFragment() {
         // Required empty public constructor
     }
@@ -60,16 +68,26 @@ public class TreeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // context
         View rootView = inflater.inflate(R.layout.fragment_tree, container, false);
-        BinaryTree appTree = MainActivity.appTree;
-        Node currNode = appTree.getRoot();
         // elements
-        Button left = rootView.findViewById(R.id.leftBtn);
-        Button right = rootView.findViewById(R.id.rightBtn);
-        Button up  = rootView.findViewById(R.id.upBtn);
+        left = rootView.findViewById(R.id.leftBtn);
+        right = rootView.findViewById(R.id.rightBtn);
+        up  = rootView.findViewById(R.id.upBtn);
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                currNode = currNode.getLeft();
+            }
+        });
+        right.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                currNode = currNode.getRight();
+            }
+        });
+        up.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                currNode = currNode.getParent();
             }
         });
         hideShowReset(currNode, rootView);
@@ -79,11 +97,12 @@ public class TreeFragment extends Fragment {
     {
         TextView currentNode = v.findViewById(R.id.nodeViewTv);
         TextView nodeData = v.findViewById(R.id.nodeDataTv);
-        currentNode.setText("Root");
-        nodeData.setText(node.getData().toString());
-//        if(node.isLeaf())
-//        {
-//
-//        }
+        String label = node.getParent() == null ? "Root": node.isLeaf() ? "Leaf": "Branch";
+        String data = node.getData().toString();
+        currentNode.setText(label);
+        nodeData.setText(data);
+        if(node.getLeft() == null) left.setVisibility(View.INVISIBLE);
+        if(node.getRight() == null) right.setVisibility(View.INVISIBLE);
+        if(node.getParent() == null) up.setVisibility(View.INVISIBLE);
     }
 }
